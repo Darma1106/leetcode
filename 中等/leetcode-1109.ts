@@ -28,9 +28,10 @@
 
 function corpFlightBookings(bookings: number[][], n: number): number[] {
   let diff = new Array(n + 1).fill(0)
-  for (let [firsti, lasteri, index] of bookings) {
-    diff[firsti - 1] += index
-    diff[lasteri] -= index
+  for (let [firsti, lasteri, seat] of bookings) {
+    diff[firsti - 1] += seat
+    diff[lasteri] -= seat
+    console.log(diff, 'diff')
   }
 
   let res = []
@@ -46,9 +47,11 @@ function corpFlightBookings(bookings: number[][], n: number): number[] {
 console.log(
   corpFlightBookings(
     [
-      [2, 2, 30],
-      [2, 2, 45]
+      [1, 2, 10],
+      [2, 3, 20],
+      [3, 4, 15],
+      [2, 5, 25]
     ],
-    2
+    5
   )
 )
