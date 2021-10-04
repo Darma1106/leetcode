@@ -19,4 +19,4 @@ function lengthOfLongestSubstring(s: string): number {
   }
   return result
 }
-console.log(lengthOfLongestSubstring('aab'))
+console.log(lengthOfLongestSubstring('aabca'))
